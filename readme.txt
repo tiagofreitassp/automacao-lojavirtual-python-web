@@ -7,7 +7,7 @@
  .Google Chrome Webdriver versao 84. O driver esta "setado" para executar no MacOS
  .Python 3.8
  .PyCharm ou Visual Studio Code.
- .Dependencias Maven (Unittest, Webdriver, OS, Selenium).
+ .Dependencias (Unittest, Webdriver, OS, Selenium).
 
 2.Configuracoes:
  .O projeto foi criado para executar no MacOS. Mas pode receber adaptacoes para executar no Windows e Linux

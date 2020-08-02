@@ -39,8 +39,8 @@ class myStoreDriverWeb():
         try:
             document = Document()
 
-            document.add_heading('MyStore Loja Virtual', 0)
-            p = document.add_paragraph("Cenario: "+nomeEvidencia)
+            h = document.add_heading('MyStore Loja Virtual', 0)
+            p = document.add_paragraph("Cenário: "+nomeEvidencia)
 
             document.add_paragraph(id+'_Tela01')
             document.add_picture(diretorioEvidencia + '/Ev1.png', width=Inches(6.16))
@@ -83,9 +83,10 @@ class myStoreDriverWeb():
             document.save(diretorioEvidencia + '/' + nomeEvidencia + '.docx')
             print("Documento com as evidencias gerada com sucesso!")
         except:
+            e = Exception
+            print("Erro: "+e)
             print("Não foi possivel criar o documento com as evidencias!")
 
     def fecharDriver(self):
-        if self.driver != null:
-            self.driver.quit()
-            print("Driver finalizado com sucesso!")
+        self.driver.quit()
+        print("Driver finalizado com sucesso!")

@@ -1,5 +1,8 @@
 from time import sleep
 from appium.webdriver.common.touch_action import TouchAction
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage():
     def clicar(self, tipoEl, el):
@@ -11,6 +14,25 @@ class BasePage():
             self.driver.find_element_by_xpath(el).click()
         elif tipoEl == "CLASS" or tipoEl.__eq__("class"):
             self.driver.find_element_by_class_name(el).click()
+        sleep(1)
+
+    def waitElementClickable(self,tipoEl,el):
+        button = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.dismiss')))
+        button.click()
+
+        if tipoEl == "ID" or tipoEl.__eq__("id"):
+            element = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.id, el)))
+            element.click()
+        elif tipoEl == "NAME" or tipoEl.__eq__("name"):
+            element = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.name, el)))
+            element.click()
+        elif tipoEl == "XPATH" or tipoEl.__eq__("xpath"):
+            element = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.xpath, el)))
+            element.click()
+        elif tipoEl == "CLASS" or tipoEl.__eq__("class"):
+            element = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.className, el)))
+            element.click()
+        sleep(1)
 
     def escrever(self, tipoEl, el, texto):
         if tipoEl == "ID" or tipoEl.__eq__("id"):
@@ -21,6 +43,7 @@ class BasePage():
             self.driver.find_element_by_xpath(el).send_keys(texto)
         elif tipoEl == "CLASS" or tipoEl.__eq__("class"):
             self.driver.find_element_by_class_name(el).send_keys(texto)
+        sleep(1)
 
     def validarTexto(self,tipoEl,el,texto):
         sleep(1)
@@ -86,5 +109,7 @@ class BasePage():
         sleep(1)
 
     def returnToWindowPrincipal(self):
+        sleep(2)
         # Retorna para a janela principal (fora do iframe)
         self.driver.switch_to.default_content()
+        sleep(2)

@@ -17,6 +17,12 @@ class myStoreTest(unittest.TestCase):
         p.autenticacao(self,"teste.nove@mail.com","abc@12345")
         p.escolherCategoria(self)
         p.escolherProduto(self)
+        p.etapa1_AdcionarAoCarrinho(self)
+        p.etapa2_Summary(self)
+        p.etapa3_Address(self)
+        p.etapa4_Shipping(self)
+        p.etapa5_Payment(self)
+        p.deslogar(self)
 
     def tearDown(self):
         d.fecharDriver(self)

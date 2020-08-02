@@ -7,6 +7,11 @@ from docx.shared import Inches
 dir = '../evidencias/'
 
 class myStoreDriverWeb():
+    def criarDriver(self):
+        self.driver.maximize_window()
+        self.driver.get("http://automationpractice.com/index.php?")
+        self.driver.implicitly_wait(12)
+
     def criarPastaEvidencia(self, nPasta):
             d = nPasta
             if os.path.exists(d) == True:
@@ -44,11 +49,6 @@ class myStoreDriverWeb():
             print("Documento com as evidencias gerada com sucesso!")
         except:
             print("Não foi possivel criar o documento com as evidencias!")
-
-    def criarDriver(self):
-        self.driver.maximize_window()
-        self.driver.get("http://automationpractice.com/index.php?")
-        self.driver.implicitly_wait(12)
 
     def fecharDriver(self):
         self.driver.quit()

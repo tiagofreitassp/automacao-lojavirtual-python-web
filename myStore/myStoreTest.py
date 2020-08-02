@@ -6,6 +6,8 @@ from myStore import myStoreDriverWeb,myStorePage
 d = myStoreDriverWeb.myStoreDriverWeb
 p = myStorePage.myStorePage
 
+dirMyStore = '../evidencias/MyStoreOnline'
+
 class myStoreTest(unittest.TestCase):
     # driver = webdriver.Chrome(executable_path="chromedriver")
     driver = webdriver.Chrome()
@@ -25,6 +27,7 @@ class myStoreTest(unittest.TestCase):
         p.deslogar(self)
 
     def tearDown(self):
+        d.criarDocumentoDeEvidencia(self, dirMyStore, "CT01", "Realizar compra em Loja Virtual")
         d.fecharDriver(self)
 
 if __name__ == '__main__':

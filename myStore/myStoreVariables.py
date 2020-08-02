@@ -9,7 +9,7 @@ botaoSignIn = "SubmitLogin"  #d
 botaoAddToCart = "Submit" #name
 botaoProceedToCheckout = "//a[@title='Proceed to checkout']" #xpath
 botaoPayByBankWire = "bankwire" #className
-botaoIconfirmMyOrder = "//button[@type='submit']" #xpath
+botaoIconfirmMyOrder = "//span[contains(text(),'I confirm my order')]" #xpath
 botaoSHOPPINGCARTSUMMARY_ProceedToCheckout = "//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]" #xpath
 botaoAddress_ProceedToCheckout = "processAddress" #name
 botaoShipping_ProceedToCheckout = "processCarrier" #name

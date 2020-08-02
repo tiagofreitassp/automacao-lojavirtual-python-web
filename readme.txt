@@ -28,4 +28,4 @@
   problema em usar a massa disponivel na feature desde que verifique antes se o site nao apagou do banco de dados.
 
 6.Drivers:
- .Utilize o pip install para instalar via terminal os driver dos navegadores.
+ .Utilize o pip install para instalar via terminal os drivers dos navegadores.

@@ -24,7 +24,7 @@
  .Para visualizar as evidencias no documento pode usar o MS Office Word ou o LibreOffice
 
 5.Massas:
- .Antes de executar nao esqueca de trocar as massas por uma adequada. Naao ha
+ .Antes de executar nao esqueca de trocar as massas por uma adequada. Nao ha
   problema em usar a massa disponivel na feature desde que verifique antes se o site nao apagou do banco de dados.
 
 6.Drivers:

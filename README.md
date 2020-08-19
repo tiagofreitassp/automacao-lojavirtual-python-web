@@ -27,7 +27,7 @@ Scripts de automação web em uma Loja Virtual desenvolvido com Python, Unittest
 
 O projeto foi criado para executar no MacOS. Mas pode receber adaptacoes para executar no Windows e Linux caso nao execute bem fora do MacOS.
 
-Recomendado utilizar o Intellij Idea, mas pode usar o Eclipse IDE, Visual Studio Code ou Spring Tools Suite.
+Recomendado utilizar o PyCharm, mas pode usar o Eclipse IDE ou Visual Studio Code.
 
 ###  - Fluxo
 *Descricao: Este script ira executar uma compra online, seguindo o fluxo desde a escolha do produto ate a etapa de confirmacao da compra.

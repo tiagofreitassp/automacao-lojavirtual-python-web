@@ -15,7 +15,6 @@ Scripts de automação web em uma Loja Virtual desenvolvido com Python, Unittest
 ## Dependências:
 * Selenium
 * OS
-* Appium-Python-Client
 * Time
 * DocX
 * Utilize o pip install para instalar via terminal os drivers dos navegadores.

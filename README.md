@@ -7,7 +7,7 @@ Scripts de automação web em uma Loja Virtual desenvolvido com Python, Unittest
 
 ## Tecnologias:
 * [Python 3.8](https://www.python.org/)
-* [unittest](https://docs.python.org/3/library/unittest.html)
+* [Unittest](https://docs.python.org/3/library/unittest.html)
 * [Selenium](https://selenium-python.readthedocs.io/)
 * [Pycharm](https://www.jetbrains.com/pt-br/pycharm/)
 * [PyPI](https://pypi.org/project/selenium/)

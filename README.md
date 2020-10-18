@@ -50,4 +50,6 @@ Para visualizar as evidencias no documento pode usar o MS Office Word ou o Libre
 
 Inserir as massas para teste na classe myStoreTest.
 
-Abrir a classe myStoreTest.py no PyCharm
+Abrir a classe myStoreTest.py no PyCharm.
+
+O webdriver deve ficar na pasta drivers, este projeto esta setado apenas para o Chrome no Mac OS e no Windows. Nao esqueca de verificar tambem a versao do navegador e baixar os webdrivers para os outros navegadores.

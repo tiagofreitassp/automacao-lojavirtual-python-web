@@ -9,14 +9,13 @@ p = myStorePage.myStorePage
 dirMyStore = '../evidencias/MyStoreOnline'
 
 class myStoreTest(unittest.TestCase):
-    # driver = webdriver.Chrome(executable_path="chromedriver")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('../drivers/chromedriver')
 
     def setUp(self):
         d.criarDriver(self)
 
     def test_RealizarCompraOnline(self):
-        p.autenticacao(self,"teste.nove@mail.com","abc@12345")
+        p.autenticacao(self,"teste.email.1@mail.com","abc@12345")
         p.escolherCategoria(self)
         p.escolherProduto(self)
         p.etapa1_AdcionarAoCarrinho(self)

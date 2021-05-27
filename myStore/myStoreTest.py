@@ -1,6 +1,8 @@
 import os, unittest,time
 
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 from myStore import myStoreDriverWeb,myStorePage
 
 d = myStoreDriverWeb.myStoreDriverWeb
@@ -9,7 +11,8 @@ p = myStorePage.myStorePage
 dirMyStore = '../evidencias/MyStoreOnline'
 
 class myStoreTest(unittest.TestCase):
-    driver = webdriver.Chrome('../drivers/chromedriver')
+    #driver = webdriver.Chrome('../drivers/chromedriver')
+    driver = webdriver.Chrome(ChromeDriverManager().install())
 
     def setUp(self):
         d.criarDriver(self)

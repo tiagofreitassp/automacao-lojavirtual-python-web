@@ -14,9 +14,10 @@ dirMyStore = '../evidencias/MyStoreOnline'
 class myStorePage():
     def autenticacao(self, email, senha):
         d.criarPastaEvidencia(self,dirMyStore)
+        p.selectElement(self,className,v.labelSignIn)
         p.clicar(self,className,v.labelSignIn)
-        p.escrever(self,id,v.campoEmail, email)
-        p.escrever(self,id,v.campoSenha, senha)
+        p.escrever(self, id, v.campoEmail, email)
+        p.escrever(self, id, v.campoSenha, senha)
         d.gerarScreenshot(self, dirMyStore, "Ev1")
         p.clicar(self,id,v.botaoSignIn)
 
@@ -56,7 +57,7 @@ class myStorePage():
         p.checkIfElementIsVisible(self, className, v.txtShipping)
         d.gerarScreenshot(self, dirMyStore, "Ev7")
         p.clicar(self,id,v.checkboxTermOfService)
-        sleep(5)
+        p.esperar(self,5)
         d.gerarScreenshot(self, dirMyStore, "Ev8")
         p.clicar(self,name,v.botaoShipping_ProceedToCheckout)
 
@@ -70,9 +71,10 @@ class myStorePage():
         p.clicar(self,xpath,v.botaoIconfirmMyOrder)
         p.checkIfElementIsVisible(self, className, v.txtOrderConfirmation)
         d.gerarScreenshot(self, dirMyStore, "Ev11")
-        sleep(2)
+        p.esperar(self,2)
 
     def deslogar(self):
+        p.selectElement(self, className, v.labelSignOut)
         p.clicar(self,className,v.labelSignOut)
         p.checkIfElementIsVisible(self, id, v.campoEmail)
         p.checkIfElementIsVisible(self, id, v.campoSenha)

@@ -1,10 +1,10 @@
 from time import sleep
-from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage():
+
     def clicar(self, tipoEl, el):
         if tipoEl == "ID" or tipoEl.__eq__("id"):
             self.driver.find_element_by_id(el).click()
@@ -14,7 +14,18 @@ class BasePage():
             self.driver.find_element_by_xpath(el).click()
         elif tipoEl == "CLASS" or tipoEl.__eq__("class"):
             self.driver.find_element_by_class_name(el).click()
-        sleep(1)
+    sleep(1)
+
+    def selectElement(self, tipoEl, el):
+        if tipoEl == "ID" or tipoEl.__eq__("id"):
+            self.driver.find_element_by_id(el).click()
+        elif tipoEl == "NAME" or tipoEl.__eq__("name"):
+            self.driver.find_element_by_name(el).click()
+        elif tipoEl == "XPATH" or tipoEl.__eq__("xpath"):
+            self.driver.find_element_by_xpath(el).click()
+        elif tipoEl == "CLASS" or tipoEl.__eq__("class"):
+            element = self.driver.find_element_by_class_name(el)
+            self.driver.execute_script("arguments[0].style.border=arguments[1]", element, "solid 4px red")
 
     def waitElementClickable(self,tipoEl,el):
         button = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.dismiss')))
@@ -107,6 +118,12 @@ class BasePage():
             iframe = self.driver.find_element_by_class_name(el)
             self.driver.switch_to.frame(iframe)
         sleep(1)
+
+    def esperar(self, t):
+        if t > 0:
+            sleep(t)
+        else:
+            sleep(1)
 
     def returnToWindowPrincipal(self):
         sleep(2)

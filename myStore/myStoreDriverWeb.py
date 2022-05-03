@@ -88,5 +88,6 @@ class myStoreDriverWeb():
             print("Não foi possivel criar o documento com as evidencias!")
 
     def fecharDriver(self):
-        self.driver.quit()
+        if self.driver != null:
+            self.driver.quit()
         print("Driver finalizado com sucesso!")

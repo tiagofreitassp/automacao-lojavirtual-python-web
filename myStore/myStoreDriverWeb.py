@@ -84,7 +84,7 @@ class myStoreDriverWeb():
             print("Documento com as evidencias gerada com sucesso!")
         except:
             e = Exception
-            print("Erro: "+e)
+            print(e)
             print("Não foi possivel criar o documento com as evidencias!")
 
     def fecharDriver(self):

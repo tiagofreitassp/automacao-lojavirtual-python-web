@@ -5,7 +5,7 @@ labelWomen = "//a[@class='sf-with-ul'][contains(text(),'Women')]" #xpath
 campoEmail = "email"  #id
 campoSenha = "passwd"  #id
 
-botaoSignIn = "SubmitLogin"  #d
+botaoSignIn = "SubmitLogin"  #id
 botaoAddToCart = "Submit" #name
 botaoProceedToCheckout = "//a[@title='Proceed to checkout']" #xpath
 botaoPayByBankWire = "bankwire" #className

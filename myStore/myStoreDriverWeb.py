@@ -11,7 +11,7 @@ dirMyStore = '../evidencias/MyStoreOnline'
 class myStoreDriverWeb():
     def criarDriver(self):
         self.driver.maximize_window()
-        self.driver.get("http://automationpractice.com/index.php?")
+        self.driver.get("http://www.automationpractice.pl/index.php")
         self.driver.implicitly_wait(12)
 
     def criarPastaEvidencia(self, nPasta):

@@ -11,8 +11,8 @@ p = myStorePage.myStorePage
 dirMyStore = '../evidencias/MyStoreOnline'
 
 class myStoreTest(unittest.TestCase):
-    #driver = webdriver.Chrome('../drivers/chromedriver')
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Chrome()
+    #driver = webdriver.Chrome(ChromeDriverManager().install())
 
     def setUp(self):
         d.criarDriver(self)

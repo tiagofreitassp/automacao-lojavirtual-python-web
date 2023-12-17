@@ -141,7 +141,7 @@ class BasePage():
         sleep(1)
 
     def checkIfElementIsVisible(self,tipoEl,el):
-        sleep(1)
+        sleep(2)
         if tipoEl == "ID" or tipoEl.__eq__("id"):
             self.driver.find_element(By.ID,el).is_displayed()
         elif tipoEl == "NAME" or tipoEl.__eq__("name"):
